@@ -70,6 +70,7 @@
             <main>
                 @include('partials.alerts')
                 <div class="container">
+                    {{ @$slot }}
                     @yield('content')
                 </div>
             </main>

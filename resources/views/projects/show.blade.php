@@ -47,10 +47,10 @@
     </tbody>
 </table>
 
-<script>
+<script> console.log('my-url::',location.href);
 document.querySelectorAll('.toggle-status').forEach(button => {
     button.addEventListener('click', () => {
-        fetch(`/tasks/${button.dataset.id}/toggle`, {
+        fetch(`../tasks/${button.dataset.id}/toggle`, {
             method: 'PATCH',
             headers: {
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
